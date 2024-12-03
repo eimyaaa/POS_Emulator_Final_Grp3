@@ -149,18 +149,18 @@ public class POS_Emulator_FINAL {
 			    }
 			else {
 				System.out.println("QTY      ITEM          PRICE     TOTAL (₱)");
-				if (milominiqty>0) 	  {System.out.println(milominiqty	 + "     " + drinks[0] + " - " 	 	 	+ sizes[0] 		 + "      " + sizePrice[0] + "      " + milominiAmount);}
-				if (milomidiqty>0) 	  {System.out.println(milomidiqty	 + "     " + drinks[0] + " - " 		 	+ sizes[1] 		 + "      " + sizePrice[1] + "      " + milomidiAmount);}
-				if (milomaxiqty>0) 	  {System.out.println(milomaxiqty	 + "     " + drinks[0] + " - " 			+ sizes[2] 		 + "      " + sizePrice[2] + "      " + milomaxiAmount);}
-				if (energenminiqty>0) {System.out.println(energenminiqty + "     " + drinks[1] + " - " 			+ sizes[0] 		 + "   " 	+ sizePrice[0] + "      " + energenminiAmount);}
-				if (energenmidiqty>0) {System.out.println(energenmidiqty + "     " + drinks[1] + " - " 		 	+ sizes[1] 		 + "   " 	+ sizePrice[1] + "      " + energenmidiAmount);}
-				if (energenmaxiqty>0) {System.out.println(energenmaxiqty + "     " + drinks[1] + " - " 			+ sizes[2] 		 + "   " 	+ sizePrice[2] + "      " + energenmaxiAmount);}
-				if (kopikominiqty>0)  {System.out.println(kopikominiqty  + "     " + drinks[2] + " - "  		+ sizes[0] 		 + "    " 	+ sizePrice[0] + "      " + kopikominiAmount);}
-				if (kopikomidiqty>0)  {System.out.println(kopikomidiqty  + "     " + drinks[2] + " - " 			+ sizes[1]  	 + "    " 	+ sizePrice[1] + "      " + kopikomidiAmount);}
-				if (kopikomaxiqty>0)  {System.out.println(kopikomaxiqty  + "     " + drinks[2] + " - " 		 	+ sizes[2] 		 + "    " 	+ sizePrice[2] + "      " + kopikomaxiAmount);}
-				if (pandesalqty>0) 	  {System.out.println(pandesalqty 	 + "     " + pastry[0] + "         " 	+ pastryPrice[0] +"      " 	+ pandesalAmount);}
-				if (monayqty>0) 	  {System.out.println(monayqty 		 + "     " + pastry[1] + "            " + pastryPrice[1] +"      " 	+ monayAmount);}
-				if (putokqty>0) 	  {System.out.println(putokqty 		 + "     " + pastry[2] + "            " + pastryPrice[2] + "      " + putokAmount);}
+				if (milominiqty>0) 	  {System.out.println(milominiqty	 + "     " + drinks[0] + " - " 	 	 	+ sizes[0] 		 + "     "  + sizePrice[0] + "      " + milominiAmount);}
+				if (milomidiqty>0) 	  {System.out.println(milomidiqty	 + "     " + drinks[0] + " - " 		 	+ sizes[1] 		 + "     "  + sizePrice[1] + "      " + milomidiAmount);}
+				if (milomaxiqty>0) 	  {System.out.println(milomaxiqty	 + "     " + drinks[0] + " - " 			+ sizes[2] 		 + "     "  + sizePrice[2] + "      " + milomaxiAmount);}
+				if (energenminiqty>0) {System.out.println(energenminiqty + "     " + drinks[1] + " - " 			+ sizes[0] 		 + "  " 	+ sizePrice[0] + "      " + energenminiAmount);}
+				if (energenmidiqty>0) {System.out.println(energenmidiqty + "     " + drinks[1] + " - " 		 	+ sizes[1] 		 + "  " 	+ sizePrice[1] + "      " + energenmidiAmount);}
+				if (energenmaxiqty>0) {System.out.println(energenmaxiqty + "     " + drinks[1] + " - " 			+ sizes[2] 		 + "  " 	+ sizePrice[2] + "      " + energenmaxiAmount);}
+				if (kopikominiqty>0)  {System.out.println(kopikominiqty  + "     " + drinks[2] + " - "  		+ sizes[0] 		 + "   " 	+ sizePrice[0] + "      " + kopikominiAmount);}
+				if (kopikomidiqty>0)  {System.out.println(kopikomidiqty  + "     " + drinks[2] + " - " 			+ sizes[1]  	 + "   " 	+ sizePrice[1] + "      " + kopikomidiAmount);}
+				if (kopikomaxiqty>0)  {System.out.println(kopikomaxiqty  + "     " + drinks[2] + " - " 	  		+ sizes[2] 		 + "   " 	+ sizePrice[2] + "      " + kopikomaxiAmount);}
+				if (pandesalqty>0) 	  {System.out.println(pandesalqty 	 + "     " + pastry[0] + "        " 	+ pastryPrice[0] +"      " 	+ pandesalAmount);}
+				if (monayqty>0) 	  {System.out.println(monayqty 		 + "     " + pastry[1] + "           " + pastryPrice[1] +"      " 	+ monayAmount);}
+				if (putokqty>0) 	  {System.out.println(putokqty 		 + "     " + pastry[2] + "           " + pastryPrice[2] + "      " + putokAmount);}
 				                	   System.out.println("SUBTOTAL                         " + orderAmount);
 			}
 		}
@@ -415,7 +415,7 @@ public class POS_Emulator_FINAL {
 					energenminiqty = 0; energenmidiqty = 0; energenmaxiqty = 0; energenminiAmount = 0; energenmidiAmount = 0; energenmaxiAmount = 0;
 					kopikominiqty  = 0; kopikomidiqty  = 0; kopikomaxiqty  = 0; kopikominiAmount  = 0; kopikomidiAmount  = 0; kopikomaxiAmount  = 0;
 					pandesalqty    = 0; monayqty       = 0; putokqty       = 0; pandesalAmount    = 0; monayAmount       = 0; putokAmount       = 0;
-					drinkstotal    = 0; pastrytotal    = 0; 
+					drinkstotal    = 0; pastrytotal    = 0;  //to reset the transaction
 				}else if (ans == 2) {
 					return;
 				}else {
@@ -432,107 +432,139 @@ public class POS_Emulator_FINAL {
 			if (orderAmount == 0) {
 				System.out.println("You don't have transaction yet.");
 			}else {
-				System.out.print("Are you sure you want to checkout now?\n1. Yes\n2. No ");
+				System.out.println("Are you sure you want to checkout now?\n1. Yes\n2. No ");
 				int ans = scn.nextInt();
     			if(ans == 1) {
-					System.out.println("Put payment here => ");
-					pay = scn.nextDouble();
-					if(pay <= orderAmount) {
-						System.out.println("Not enough payment");
-						checkout();
-					}else if (pay >= orderAmount){
-						System.out.println("Are you a PWD?\nPress Y for Yes and N for No: ");
-						String pwd = scn.next();
-						System.out.println("Are you a senior citizen?\nPress Y for Yes and N for No: ");
-						String senior = scn.next();
-						if (pwd.equalsIgnoreCase("Y") && senior.equalsIgnoreCase("Y")) {
-							double discount = orderAmount*0.20;
-							double fAmount  = orderAmount - (discount*2);
+					System.out.println("Are you a PWD?\n1. Yes\n2. No ");
+					int pwd = scn.nextInt();
+					System.out.println("Are you a senior citizen?\n1. Yes\n2. No ");
+					int senior = scn.nextInt();
+					if (pwd == 1 && senior == 1) {
+						double discount = orderAmount*0.20;
+						double fAmount  = orderAmount - (discount*2);
+						double VAT      = 0.20 * fAmount;
+						double VSales 	= fAmount - VAT;
+						Date now 		= new Date();
+						System.out.println("Total Amount = " + fAmount);
+						System.out.print("Put payment here => ");
+						pay = scn.nextDouble();
+						if(pay < fAmount) {
+							System.out.println("Not enough payment");
+							checkout();
+						}else {
 							double change   = pay - fAmount;
-							double VAT      = 0.20 * fAmount;
-							double VSales 	= fAmount - VAT;
-							Date now 		= new Date();
-							System.out.println("         Four Queens and a King\n--------------------------------------------");
-							System.out.println("         Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
+							System.out.println("          Four Queens and a King\n--------------------------------------------");
+							System.out.println("          Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
 							System.out.println(" Tell us about your experience in our shop\n             www.FQaaK.com");
 							System.out.println("   Date : " + now + "\n--------------------------------------------");
 							viewOrder();
-							System.out.println("SUBTOTAL                          " + orderAmount);
-							System.out.println("SENIOR DISCOUNT                   " + discount + "-");
-							System.out.println("PWD DISCOUNT                      " + discount + "-");
-							System.out.println("TOTAL DISCOUNT                    " + discount*2 + "-");
-							System.out.println("DISCOUNT REASON                   " + "PWD & SENIOR");
-							System.out.println("TOTAL                             " + fAmount);
-							System.out.println("Cash Tendered                     " + pay);
-							System.out.println("Change                            " + change);
-							System.out.println("Vatable Sales                     " + String.format("%.2f", VSales));
-							System.out.println("VAT                               " + VAT);
-							System.out.println("     Thank you, please come again.");
-						}else if (pwd.equalsIgnoreCase("Y") && senior.equalsIgnoreCase("N")) {
-							double discount = orderAmount*0.20;
-							double fAmount 	= orderAmount - discount;
-							double change 	= pay - fAmount;
-							double VAT 		= 0.20 * fAmount;
-							double VSales 	= fAmount - VAT;
-							Date now 		= new Date();
-							System.out.println("         Four Queens and a King\n--------------------------------------------");
-							System.out.println("         Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
+							System.out.println("SENIOR DISCOUNT                  " + discount + "-");
+							System.out.println("PWD DISCOUNT                     " + discount + "-");
+							System.out.println("TOTAL DISCOUNT                   " + discount*2 + "-");
+							System.out.println("DISCOUNT REASON                  " + "PWD & SENIOR");
+							System.out.println("TOTAL                            " + fAmount);
+							System.out.println("Cash Tendered                    " + pay);
+							System.out.println("Change                           " + change);
+							System.out.println("Vatable Sales                    " + String.format("%.2f", VSales));
+							System.out.println("VAT                              " + VAT);
+							System.out.println("       Thank you, please come again.");
+						}	
+					}else if (pwd == 1 && senior == 2) {
+						double discount = orderAmount*0.20;
+						double fAmount 	= orderAmount - discount;
+						double VAT 		= 0.20 * fAmount;
+						double VSales 	= fAmount - VAT;
+						Date now 		= new Date();
+						System.out.println("Total Amount = " + fAmount);
+						System.out.print("Put payment here => ");
+						pay = scn.nextDouble();
+						if(pay < fAmount) {
+							System.out.println("Not enough payment");
+							checkout();
+						}else {
+							double change   = pay - fAmount;
+							System.out.println("          Four Queens and a King\n--------------------------------------------");
+							System.out.println("          Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
 							System.out.println(" Tell us about your experience in our shop\n             www.FQaaK.com");
 							System.out.println("   Date : " + now + "\n--------------------------------------------");
 							viewOrder();
-							System.out.println("PWD DISCOUNT                      " + discount + "-");
-							System.out.println("TOTAL DISCOUNT                    " + discount + "-");
-							System.out.println("DISCOUNT REASON                   " + "PWD");
-							System.out.println("TOTAL                             " + fAmount);
-							System.out.println("Cash Tendered                     " + pay);
-							System.out.println("Change                            " + change);
-							System.out.println("Vatable Sales                     " + String.format("%.2f", VSales));
-							System.out.println("VAT                               " + VAT);
-							System.out.println("     Thank you, please come again.");
-						}else if (pwd.equalsIgnoreCase("N") && senior.equalsIgnoreCase("Y")) {
-							double discount = orderAmount*0.20;
-							double fAmount 	= orderAmount - discount;
-							double change 	= pay - fAmount;
-							double VAT 		= 0.20 * fAmount;
-							double VSales 	= fAmount - VAT;
-							Date now 		= new Date();
-							System.out.println("         Four Queens and a King\n--------------------------------------------");
-							System.out.println("         Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
-							System.out.println(" Tell us about your experience in our shop\n             www.FQaaK.com");
-							System.out.println("   Date : " + now + "\n--------------------------------------------");
-							viewOrder();
-							System.out.println("SENIOR DISCOUNT                   " + discount + "-");
-							System.out.println("TOTAL DISCOUNT                    " + discount + "-");
-							System.out.println("DISCOUNT REASON                   " + "SENIOR");
-							System.out.println("TOTAL                             " + fAmount);
-							System.out.println("Cash Tendered                     " + pay);
-							System.out.println("Change                            " + change);
-							System.out.println("Vatable Sales                     " + String.format("%.2f", VSales));
-							System.out.println("VAT                               " + VAT);
-							System.out.println("     Thank you, please come again.");
-						}else if (pwd.equalsIgnoreCase("N") && senior.equalsIgnoreCase("N")) {
-							double change = pay - orderAmount;
-							double VAT 	  = 0.20 * orderAmount;
-							double VSales = orderAmount - VAT;
-							Date now 	  = new Date();
-							System.out.println("         Four Queens and a King\n--------------------------------------------");
-							System.out.println("         Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
-							System.out.println(" Tell us about your experience in our shop\n             www.FQaaK.com");
-							System.out.println("   Date : " + now + "\n--------------------------------------------");
-							viewOrder();
-							System.out.println("TOTAL                             " + orderAmount);
-							System.out.println("Cash Tendered                     " + pay);
-							System.out.println("Change                            " + change);
-							System.out.println("Vatable Sales                     " + String.format("%.2f", VSales));
-							System.out.println("VAT                               " + VAT);
-							System.out.println("     Thank you, please come again.");
-						}else {				
-							
+							System.out.println("PWD DISCOUNT                     " + discount + "-");
+							System.out.println("TOTAL DISCOUNT                   " + discount + "-");
+							System.out.println("DISCOUNT REASON                  " + "PWD");
+							System.out.println("TOTAL                            " + fAmount);
+							System.out.println("Cash Tendered                    " + pay);
+							System.out.println("Change                           " + change);
+							System.out.println("Vatable Sales                    " + String.format("%.2f", VSales));
+							System.out.println("VAT                              " + VAT);
+							System.out.println("       Thank you, please come again.");
 						}
+					}else if (pwd == 2 && senior == 1) {
+						double discount = orderAmount*0.20;
+						double fAmount 	= orderAmount - discount;
+						double VAT 		= 0.20 * fAmount;
+						double VSales 	= fAmount - VAT;
+						Date now 		= new Date();
+						System.out.println("Total Amount = " + fAmount);
+						System.out.print("Put payment here => ");
+						pay = scn.nextDouble();
+						if(pay < fAmount) {
+							System.out.println("Not enough payment");
+							checkout();
+						}else {
+							double change   = pay - fAmount;
+							System.out.println("          Four Queens and a King\n--------------------------------------------");
+							System.out.println("          Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
+							System.out.println(" Tell us about your experience in our shop\n             www.FQaaK.com");
+							System.out.println("   Date : " + now + "\n--------------------------------------------");
+							viewOrder();
+							System.out.println("SENIOR DISCOUNT                  " + discount + "-");
+							System.out.println("TOTAL DISCOUNT                   " + discount + "-");
+							System.out.println("DISCOUNT REASON                  " + "SENIOR");
+							System.out.println("TOTAL                            " + fAmount);
+							System.out.println("Cash Tendered                    " + pay);
+							System.out.println("Change                           " + change);
+							System.out.println("Vatable Sales                    " + String.format("%.2f", VSales));
+							System.out.println("VAT                              " + VAT);
+							System.out.println("       Thank you, please come again.");
+						}
+					}else if (pwd == 2 && senior == 2) {
+						double VAT 	  = 0.20 * orderAmount;
+						double VSales = orderAmount - VAT;
+						Date now 	  = new Date();
+						System.out.println("Total Amount = " + orderAmount);
+						System.out.print("Put payment here => ");
+						pay = scn.nextDouble();
+						if(pay < orderAmount) {
+							System.out.println("Not enough payment");
+							checkout();
+						}else {
+							double change = pay - orderAmount;
+							System.out.println("          Four Queens and a King\n--------------------------------------------");
+							System.out.println("          Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
+							System.out.println(" Tell us about your experience in our shop\n             www.FQaaK.com");
+							System.out.println("   Date : " + now + "\n--------------------------------------------");
+							viewOrder();
+							System.out.println("TOTAL                            " + orderAmount);
+							System.out.println("Cash Tendered                    " + pay);
+							System.out.println("Change                           " + change);
+							System.out.println("Vatable Sales                    " + String.format("%.2f", VSales));
+							System.out.println("VAT                              " + VAT);
+							System.out.println("       Thank you, please come again.");
+						}
+					}else {
+						System.out.println("Invalid input");
+						checkout();
 					}
+					
+					milominiqty    = 0; milomidiqty    = 0; milomaxiqty    = 0; milominiAmount    = 0; milomidiAmount    = 0; milomaxiAmount    = 0; 
+					energenminiqty = 0; energenmidiqty = 0; energenmaxiqty = 0; energenminiAmount = 0; energenmidiAmount = 0; energenmaxiAmount = 0;
+					kopikominiqty  = 0; kopikomidiqty  = 0; kopikomaxiqty  = 0; kopikominiAmount  = 0; kopikomidiAmount  = 0; kopikomaxiAmount  = 0;
+					pandesalqty    = 0; monayqty       = 0; putokqty       = 0; pandesalAmount    = 0; monayAmount       = 0; putokAmount       = 0;
+					drinkstotal    = 0; pastrytotal    = 0;  //to reset the transaction after checkout
+					
 				} else if (ans == 2) {
 					return;
-				}else {
+				} else {
 			    	System.out.println("Invalid input\n");
 			    	checkout();
 			    }
@@ -551,11 +583,6 @@ public class POS_Emulator_FINAL {
 	            			case 3: removeItem(); break;
 	            			case 4: cancelTrans(); break;
 	            			case 5: checkout();
-	            					milominiqty = 0; milomidiqty = 0; milomaxiqty = 0; milominiAmount = 0; milomidiAmount = 0; milomaxiAmount = 0; 
-	            					energenminiqty = 0; energenmidiqty = 0; energenmaxiqty = 0; energenminiAmount = 0; energenmidiAmount = 0; energenmaxiAmount = 0;
-	            					kopikominiqty = 0; kopikomidiqty = 0; kopikomaxiqty = 0; kopikominiAmount = 0; kopikomidiAmount = 0; kopikomaxiAmount = 0;
-	            					pandesalqty = 0; monayqty = 0; putokqty = 0; pandesalAmount = 0; monayAmount = 0; putokAmount = 0;
-	            					drinkstotal = 0; pastrytotal = 0; 
 	            					break;
 	            			case 6: System.out.println("Exiting the program.\n\nMeanwhile..."); break;
 	            			default : System.out.println("Invalid choice. Please try again.");
