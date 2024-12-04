@@ -6,7 +6,7 @@ For Computer Programming 1 (CC103)
 
 - Gregoria Gobrin
 - Ryan Rose Jose
-- Angelie Reyes
+- Angelie Joan Reyes
 - Gaila Mae San Pedro
 - Renz Amiel Sarmiento
 
