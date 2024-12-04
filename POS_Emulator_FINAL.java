@@ -5,20 +5,19 @@ public class POS_Emulator_FINAL {
 	
 		public static Scanner scn = new Scanner(System.in);
 		
+		public static int    milominiqty = 0,    milomidiqty = 0,    milomaxiqty = 0,    //initialization for 1st drink quantity
+							 energenminiqty = 0, energenmidiqty = 0, energenmaxiqty = 0, //initialization for 2nd drink quantity
+							 kopikominiqty = 0,  kopikomidiqty = 0,  kopikomaxiqty = 0,  //initialization for 3rd drink quantity
+							 pandesalqty = 0,    monayqty = 0,       putokqty = 0;       //initialization for pastries quantity
 		
-		public static int   milominiqty = 0,    milomidiqty = 0,    milomaxiqty = 0, //initialization for 1st drink quantity
-							energenminiqty = 0, energenmidiqty = 0, energenmaxiqty = 0, //initialization for 2nd drink quantity
-							kopikominiqty = 0,  kopikomidiqty = 0,  kopikomaxiqty = 0, //initialization for 3rd drink quantity
-							pandesalqty = 0,    monayqty = 0,       putokqty = 0; //initialization for pastries quantity
+		public static double milominiAmount = 0,    milomidiAmount = 0,    milomaxiAmount = 0,    //initialization for total amount 1st drinks ordered
+							 energenminiAmount = 0, energenmidiAmount = 0, energenmaxiAmount = 0, //initialization for total amount 1st drinks ordered
+							 kopikominiAmount = 0,  kopikomidiAmount = 0,  kopikomaxiAmount = 0,  //initialization for total amount 1st drinks ordered
+							 pandesalAmount = 0,    monayAmount = 0,       putokAmount = 0,       //initialization for total amount 1st drinks ordered
+							 drinkstotal = 0, pastrytotal = 0; 
 		
-		public static double milominiAmount = 0,    milomidiAmount = 0,    milomaxiAmount = 0, 
-							 energenminiAmount = 0, energenmidiAmount = 0, energenmaxiAmount = 0, 
-							 kopikominiAmount = 0,  kopikomidiAmount = 0,  kopikomaxiAmount = 0,
-							 pandesalAmount = 0,    monayAmount = 0,       putokAmount = 0,
-							 drinkstotal = 0, pastrytotal = 0; //initialization for total drinks & pastries ordered
-		
-		public static String[] drinks      = {"Milo","Energen","Kopiko"};
-		public static String[] sizes       = {"Mini","Midi","Maxi"};
+		public static String[] drinks      = {"Milo","Energen","Kopiko"}; 
+		public static String[] sizes       = {"Mini","Midi","Maxi"};      
 		public static double[] sizePrice   = {25.00,35.00,45.00};
 		public static String[] pastry      = {"Pandesal","Monay","Putok"};
 		public static double[] pastryPrice = {10.00,15.00,25.00};
@@ -32,32 +31,32 @@ public class POS_Emulator_FINAL {
 				int order = scn.nextInt();
 				
 				switch (order) {
-				case 1 : drinksMenu(); break;
-				case 2 : pastryMenu(); break;
-				default: System.out.println("Choose 1 or 2 only.");
-						 addOrder();
+					case 1 : drinksMenu(); break;
+					case 2 : pastryMenu(); break;
+					default: System.out.println("Choose 1 or 2 only.");
+							 addOrder();
 				}
 		}
 		
-		public static void drinksMenu() {
+		public static void drinksMenu() { //req 1.1
 			System.out.println("\n-----------------\n     DRINKS\n-----------------\n1. Milo\n2. Energen\n3. Kopiko\n");
 			drinks();
 		}
 		
-		public static void sizes() {
+		public static void sizes() { //req 1.2&3
 			System.out.println("\n----------------\n      SIZES     \n-----------------\n1. Mini - ₱25.00\n2. Midi - ₱35.00\n3. Maxi - ₱45.00\n");
 		}
 		
 		public static void drinks() { 
 			System.out.print("Choose a drink: "); 
-		    int drink = scn.nextInt(); 
+		    int drink = scn.nextInt(); //req 2.1
 		    if(drink > 3 || drink < 1) {
 		    	System.out.println("Invalid order. Please try again."); 
 		    	drinksMenu(); 
 			}
 				sizes();
 				System.out.print("\nWhat size? "); 
-		        int size = scn.nextInt();
+		        int size = scn.nextInt(); //req 2.2
 			    if (size < 1 || size > 3) {
 			    	System.out.println("Invalid size. ");
 			    	drinksMenu();
@@ -102,11 +101,11 @@ public class POS_Emulator_FINAL {
 			        orderMore();
 		}
 		
-		public static void pastryMenu() {
-			int qty = 0;
+		public static void pastryMenu() { //req 1.4&5
+			int qty = 0; //para isang variable nalang per each case
 			System.out.println("\n--------------------\n PASTRIES\n--------------------\n1. Pandesal ₱10.00\n2. Monay    ₱15.00\n3. Putok    ₱25.00\n");
 		    System.out.print("What would you like to order? ");
-		    int pastryChoice = scn.nextInt();
+		    int pastryChoice = scn.nextInt(); //req 2.3
 		    
 		    	switch (pastryChoice) {
 		 	    	case 1 : System.out.print("How many? "); //PANDESAL
@@ -128,7 +127,7 @@ public class POS_Emulator_FINAL {
 		    orderMore();
 		}
 		
-		public static void orderMore() {
+		public static void orderMore() { //req 2.4
 			System.out.print("Order more?\n1. Yes\n2. No\n ");
 		    int again = scn.nextInt();
 		    
@@ -140,7 +139,7 @@ public class POS_Emulator_FINAL {
 		    }
 		}
 		
-		public static void viewOrder() {
+		public static void viewOrder() { //req 3.1
 			double orderAmount = milominiAmount + milomidiAmount + milomaxiAmount + energenminiAmount + energenmidiAmount + energenmaxiAmount + kopikominiAmount + 
 								kopikomidiAmount +kopikomaxiAmount + pandesalAmount + monayAmount + putokAmount;
 			if (orderAmount == 0) {
@@ -165,7 +164,7 @@ public class POS_Emulator_FINAL {
 			}
 		}
 		
-		public static void removeItem() {
+		public static void removeItem() { 
 		    // Check if there are any items to remove
 			if (milominiqty == 0 && milomidiqty == 0 && milomaxiqty == 0 && energenminiqty == 0 && energenmidiqty == 0 && energenmaxiqty == 0 && 
 			    kopikominiqty == 0 && kopikomidiqty == 0 && kopikomaxiqty == 0 && pandesalqty == 0 && monayqty == 0 && putokqty == 0) {
@@ -175,7 +174,7 @@ public class POS_Emulator_FINAL {
 			System.out.println("Which item would you like to remove?");
 		    viewOrder(); // Display current orders for reference
 		    System.out.println("\n1. Milo Mini\n2. Milo Midi\n3. Milo Maxi\n4. Energen Mini\n5. Energen Midi\n6. Energen Maxi\n7. Kopiko Mini\n"
-		    		+ "8. Kopiko Midi\n9. Kopiko Maxi\n10. Pandesal\n11. Monay\n12. Putok");
+		    				  + "8. Kopiko Midi\n9. Kopiko Maxi\n10. Pandesal\n11. Monay\n12. Putok");
 		    System.out.print("Enter the item number to remove: ");
 		    int itemNumber = scn.nextInt();
 		    switch (itemNumber) {
@@ -401,7 +400,7 @@ public class POS_Emulator_FINAL {
 		    }
 		}
 		
-		public static void cancelTrans() {
+		public static void cancelTrans() { //req 2.5
 			double orderAmount = milominiAmount + milomidiAmount + milomaxiAmount + energenminiAmount + energenmidiAmount + energenmaxiAmount + kopikominiAmount + kopikomidiAmount + 
 								 kopikomaxiAmount + pandesalAmount + monayAmount + putokAmount;
 			if (orderAmount == 0) {
@@ -439,37 +438,37 @@ public class POS_Emulator_FINAL {
 					int pwd = scn.nextInt();
 					System.out.println("Are you a senior citizen?\n1. Yes\n2. No ");
 					int senior = scn.nextInt();
-					if (pwd == 1 && senior == 1) {
-						double discount = orderAmount*0.20;
+					if (pwd == 1 && senior == 1) { //PWD AND SENIOR //under this is the receipt which shows the req 3.4 same w/ other conditional statement
+						double discount = orderAmount*0.20; //req 3.2 same to its else if conditional statement
 						double fAmount  = orderAmount - (discount*2);
 						double VAT      = 0.20 * fAmount;
 						double VSales 	= fAmount - VAT;
 						Date now 		= new Date();
 						System.out.println("Total Amount = " + fAmount);
-						System.out.print("Put payment here => ");
+						System.out.print("Put payment here => "); //req 3.3 same w/ other conditional statement
 						pay = scn.nextDouble();
 						if(pay < fAmount) {
 							System.out.println("Not enough payment");
 							checkout();
-						}else {
+						}else { 
 							double change   = pay - fAmount;
 							System.out.println("          Four Queens and a King\n--------------------------------------------");
 							System.out.println("          Bulacan State University\n  Mc Arthur Highway  Malolos City, Bulacan");
 							System.out.println(" Tell us about your experience in our shop\n             www.FQaaK.com");
 							System.out.println("   Date : " + now + "\n--------------------------------------------");
-							viewOrder();
+							viewOrder(); //req 3.6 same w/ other conditional statement
 							System.out.println("SENIOR DISCOUNT                  " + discount + "-");
 							System.out.println("PWD DISCOUNT                     " + discount + "-");
-							System.out.println("TOTAL DISCOUNT                   " + discount*2 + "-");
-							System.out.println("DISCOUNT REASON                  " + "PWD & SENIOR");
+							System.out.println("TOTAL DISCOUNT                   " + discount*2 + "-"); //req 3.7 same w/ other conditional statement
+							System.out.println("DISCOUNT REASON                  " + "PWD & SENIOR"); //req 3.7 same w/ other conditional statement
 							System.out.println("TOTAL                            " + fAmount);
 							System.out.println("Cash Tendered                    " + pay);
-							System.out.println("Change                           " + change);
+							System.out.println("Change                           " + change); //req 3.5 same w/ other conditional statement 
 							System.out.println("Vatable Sales                    " + String.format("%.2f", VSales));
 							System.out.println("VAT                              " + VAT);
 							System.out.println("       Thank you, please come again.");
 						}	
-					}else if (pwd == 1 && senior == 2) {
+					}else if (pwd == 1 && senior == 2) { //PWD BUT NOT SENIOR
 						double discount = orderAmount*0.20;
 						double fAmount 	= orderAmount - discount;
 						double VAT 		= 0.20 * fAmount;
@@ -498,7 +497,7 @@ public class POS_Emulator_FINAL {
 							System.out.println("VAT                              " + VAT);
 							System.out.println("       Thank you, please come again.");
 						}
-					}else if (pwd == 2 && senior == 1) {
+					}else if (pwd == 2 && senior == 1) { //NOT PWD BUT SENIOR
 						double discount = orderAmount*0.20;
 						double fAmount 	= orderAmount - discount;
 						double VAT 		= 0.20 * fAmount;
@@ -527,7 +526,7 @@ public class POS_Emulator_FINAL {
 							System.out.println("VAT                              " + VAT);
 							System.out.println("       Thank you, please come again.");
 						}
-					}else if (pwd == 2 && senior == 2) {
+					}else if (pwd == 2 && senior == 2) { //NOT PWD/SENIOR
 						double VAT 	  = 0.20 * orderAmount;
 						double VSales = orderAmount - VAT;
 						Date now 	  = new Date();
